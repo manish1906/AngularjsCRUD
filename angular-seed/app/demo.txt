@@ -1,0 +1,15 @@
+Create a CRUD demo application which have below features:
+Configuration blocks
+Run blocks
+Module structure
+controller
+view
+Model
+data binding
+Dependency injection
+services
+Expression
+filter
+repeater
+ng-init
+POP-UP

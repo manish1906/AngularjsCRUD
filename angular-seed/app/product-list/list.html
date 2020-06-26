@@ -1,0 +1,53 @@
+
+   <div class="container">
+      <div class="">
+    <div class="col-md-6 ">
+  <table class="table">
+    <input type="search" class="form-group col-md-12" ng-model="search" placeholder="Search Product">
+    <thead>
+    <tr>
+      <th><h4>Product List</h4></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     
+  </th>
+    </tr>
+    
+    </thead>
+    
+  
+    
+      <tr>
+        <th scope="col">ProductCode</th>
+        <th scope="col">ProductImage</th>
+        
+        <th scope="col">ProductName</th>
+        <th scope="col">ProductBrand</th>
+        <th scope="col">ProductPrice</th>
+        <th scope="col">ProductDescription</th>
+          <th scope="col">ProductStatus</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+       
+      </tr>
+   
+    <tr ng-repeat=" r in result | filter:search ">
+        <td scope="col">{{r.productCode}}</td>
+        <td scope="col"><img style="width: 100px;height: 100px;" src="{{r.productImage}}"></td>
+      
+      <td scope="col">{{r.productName}}</td>
+      <td scope="col">{{r.productBrand}}</td>
+      <td scope="col">{{r.productPrice}}</td>
+      <td scope="col">{{r.productDescription}}</td>
+      <td scope="col">{{r.productStatus}}</td>
+      
+       <td><button  type="button" ui-sref="edit({code:r.productCode})"> <i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+       <td><button type="button" ng-click="delete(r.productCode)" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+      
+    </tr>
+  </table>
+    </div>
+      </div></div>
+    
